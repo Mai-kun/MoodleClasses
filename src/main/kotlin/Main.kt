@@ -10,14 +10,12 @@ class Triangle(
 {
     fun getCenterOfCircle() : Point
     {
-        //находим координаты середин 2х сторон
         val x4 = (point1.x +  point2.x) / 2;
         val y4 = (point1.y + point2.y) / 2;
 
         val x5 = (point1.x + point3.x) / 2;
         val y5 = (point1.y + point3.y) / 2;
 
-        //находим коэффициенты уравнений срединных перпендикуляров
         val a1 = point2.x - point1.x;
         val b1 = point2.y - point1.y;
 
@@ -27,7 +25,6 @@ class Triangle(
         val c1 = x4 * a1 + y4 * b1;
         val c2 = x5 * a2 + y5 * b2;
 
-        //координаты точки их пересечения
         val xr = (c1 * b2 - c2 * b1) / (a1 * b2 - a2 * b1);
         val yr = (a1 * c2 - a2 * c1) / (a1 * b2 - a2 * b1);
 
